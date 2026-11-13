@@ -1,0 +1,353 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    color: #26364a;
+    background: white;
+    line-height: 1.7;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.header {
+    background: white;
+    border-bottom: 1px solid #e5eaf1;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar {
+    min-height: 85px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    color: #12356a;
+}
+
+.logo-icon {
+    background: #12356a;
+    color: white;
+    width: 52px;
+    height: 52px;
+    border-radius: 10px;
+    display: grid;
+    place-items: center;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.logo strong {
+    display: block;
+    font-size: 17px;
+}
+
+.logo small {
+    display: block;
+    font-size: 11px;
+    color: #718096;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+nav a {
+    color: #26364a;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #2465b5;
+}
+
+.hero {
+    min-height: 520px;
+    display: flex;
+    align-items: center;
+    color: white;
+    background:
+        linear-gradient(90deg, rgba(8,35,76,.95),
+        rgba(8,35,76,.65)),
+        url("images/school.jpg") center/cover no-repeat;
+}
+
+.hero-content {
+    padding: 80px 0;
+}
+
+.eyebrow {
+    color: #c59d48;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.hero h1 {
+    max-width: 750px;
+    font-size: clamp(32px, 5vw, 54px);
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero-content > p:not(.eyebrow) {
+    max-width: 620px;
+    color: #e3eaf4;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    background: #c59d48;
+    color: #102c52;
+    padding: 12px 28px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: .3s;
+}
+
+.btn:hover {
+    background: #e2bd70;
+    transform: translateY(-2px);
+}
+
+.about, .news, .gallery {
+    padding: 75px 0;
+}
+
+.about h2, .news h2, .gallery h2 {
+    color: #12356a;
+    font-size: 30px;
+    margin-bottom: 18px;
+}
+
+.about > p:last-child,
+.news > p:last-child,
+.gallery > p:last-child {
+    max-width: 750px;
+    color: #68788d;
+}
+
+.news {
+    background: #f5f8fc;
+    padding: 65px 5%;
+    max-width: 100%;
+}
+
+footer {
+    background: #102c52;
+    color: white;
+    padding: 45px 0;
+}
+
+footer h2 {
+    margin-bottom: 12px;
+}
+
+footer p {
+    color: #d1dbea;
+    font-size: 14px;
+}
+
+@media (max-width: 800px) {
+    .navbar {
+        padding: 15px 0;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav {
+        gap: 12px 18px;
+    }
+
+    .hero {
+        min-height: 430px;
+    }
+
+    .about, .news, .gallery {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+}
+
+/* MAKTAB QADRIYATLARI */
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    padding-top: 55px;
+    padding-bottom: 55px;
+}
+
+.feature-card {
+    background: #ffffff;
+    padding: 30px;
+    border: 1px solid #e5eaf1;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(18, 53, 106, 0.06);
+    transition: 0.3s;
+}
+
+.feature-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 28px rgba(18, 53, 106, 0.12);
+}
+
+.feature-icon {
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+
+.feature-card h3 {
+    color: #12356a;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.feature-card p {
+    color: #68788d;
+    font-size: 14px;
+}
+
+@media (max-width: 800px) {
+    .features {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* SCHOOL STATISTICS */
+
+.statistics {
+    background: #f2f6fc;
+    padding: 55px 0;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    text-align: center;
+}
+
+.stat-card {
+    background: white;
+    padding: 30px 15px;
+    border-radius: 10px;
+    border: 1px solid #e4eaf2;
+}
+
+.stat-number {
+    display: block;
+    font-size: 38px;
+    font-weight: 800;
+    color: #12356a;
+}
+
+.stat-card p {
+    color: #68788d;
+    font-size: 15px;
+}
+
+/* DIRECTOR */
+
+.director {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    align-items: center;
+    gap: 50px;
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.director h2 {
+    color: #12356a;
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.director h3 {
+    color: #2465b5;
+    font-size: 23px;
+    margin-bottom: 12px;
+}
+
+.director-info > p:last-child {
+    color: #68788d;
+}
+
+.director-placeholder {
+    min-height: 260px;
+    background: #edf2f9;
+    border: 2px dashed #b7c6dc;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #12356a;
+}
+
+.director-placeholder span {
+    font-size: 65px;
+    font-weight: bold;
+}
+
+@media (max-width: 800px) {
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .director {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+}
+
+.history {
+    padding: 50px 10%;
+    background: #f5f7fa;
+    text-align: center;
+}
+
+.history h2 {
+    color: #17365d;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.history p {
+    color: #444;
+    font-size: 17px;
+    line-height: 1.8;
+    max-width: 850px;
+    margin: 12px auto;
+}
